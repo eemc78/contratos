@@ -35,14 +35,15 @@ class MailController extends Controller
     public function store(Request $request)
     {
 
-        Mail::send('contacto',$request->all(), function($msj){
+        Mail::send('emails/contact',$request->all(), function($msj){
             $msj->subject('Correo de Contacto');
             $msj->to('sistemas@clinicalauradaniela.com');
+            $msj->cc('sistemas@clinicaintegral.com.co');
 
         });
 
         Session::flash('messaje','Mensaje enviado Correctamente');
-        return Redirect::to('/contacto');
+        return Redirect::to('contacto');
     }
 
     public function show($id){

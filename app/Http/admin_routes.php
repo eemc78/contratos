@@ -10,9 +10,11 @@ Route::auth();
 	//Route::get('mail', 'mailcontroller@dtajax');
 	//Route::('mail', 'MailController@store');
 	Route::get('contact', function(){
-		return view('email\contact');
+		return view('emails\contact');
 	});
-	
+		Route::get('contacto', function(){
+		return view('contacto');
+	});
 
 /* ================== Access Uploaded Files ================== */
 Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');

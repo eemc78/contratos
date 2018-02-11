@@ -29,7 +29,8 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    //'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'mail2.runhosting.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +56,9 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    //'from' => ['address' => null, 'name' => null],
+'from' => ['address' => 'sistemas@funamass.com', 'name' => 'Ing. Edgardo Martinez'],
+
 
     /*
     |--------------------------------------------------------------------------
