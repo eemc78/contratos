@@ -57,7 +57,7 @@ return [
     */
 
     //'from' => ['address' => null, 'name' => null],
-'from' => ['address' => 'sistemas@funamass.com', 'name' => 'Ing. Edgardo Martinez'],
+'from' => ['address' => 'appcontratos@edgardomartinez.com', 'name' => 'Ing. Edgardo Martinez'],
 
 
     /*

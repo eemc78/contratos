@@ -107,40 +107,19 @@
 			<div class="contact-link"><i class="fa fa-cube"></i> <a href="http://edgardomartinez.com">edgardomartinez.com</a></div>
         </div>
 
-        <div class="col-lg-7">
-            <h3>Dejenos sus comentarios</h3>
-            <br>
-            <form role="form" action="#" method="post" enctype="plain">
-                <div class="form-group">
-                    <label for="name1">Su Nombre</label>
-                    <input type="name" name="Name" class="form-control" id="name1" placeholder="Su Nombre">
-                </div>
-                <div class="form-group">
-                    <label for="email1">Email</label>
-                    <input type="email" name="Mail" class="form-control" id="email1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label>Exprese sus comentarios</label>
-                    <textarea class="form-control" name="Message" rows="3"></textarea>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-large btn-success">Enviar</button>
-            </form>
-        </div>
-
 
         <div class="col-lg-7">
             <h3>NUEVOS COMENTARIOS</h3>
             <br>
             {!!Form::open(['route'=>'mail.store','method'=>'POST'])!!}
                 <div class="form-group">                    
-                    {!!Form::text('name', null,['placeholder'=> 'Nombre'])!!}
+                    {!!Form::text('name', null,['placeholder'=> 'Nombre',  'class'=>'form-control' ])!!}
                 </div>
                 <div class="form-group">
-                    {!!Form::text('email', null,['placeholder'=> 'Email'])!!}
+                    {!!Form::text('email', null,['placeholder'=> 'Email',  'class'=>'form-control' ])!!}
                 </div>
                 <div class="form-group">
-                    {!!Form::textarea('mensaje', null,['placeholder'=> 'Mensaje'])!!}
+                    {!!Form::textarea('mensaje', null,['placeholder'=> 'Mensaje',  'class'=>'form-control' ])!!}
                 </div>
                 <br>
                  {!! Form::reset('Limpiar', ['class' => 'btn btn-primary']) !!}

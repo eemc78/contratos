@@ -5,9 +5,9 @@
 	<title>Respuesta de correo</title>
 </head>
 <body>
-	<p> <strong>Nombre</tstrong>{{ $name }}</p>
-	<p> <strong>Correo</tstrong>{{ $email }}</p>
-	<p> <strong>Mensaje</tstrong>{{ $mensaje }}</p>
+	<p> <strong>Nombre: </tstrong>{{ $name }}</p>
+	<p> <strong>Correo: </tstrong>{{ $email }}</p>
+	<p> <strong>Mensaje: </tstrong>{{ $mensaje }}</p>
 
 </body>
 </html>
