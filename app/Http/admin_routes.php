@@ -114,4 +114,10 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Notificas ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/notificas', 'LA\NotificasController');
 	Route::get(config('laraadmin.adminRoute') . '/notifica_dt_ajax', 'LA\NotificasController@dtajax');
+
+	Route::get('sendEmail', function(){
+		
+		$job = new \App\Jobs\EnviaEmail();
+		dispatch($job);
+	});
 });

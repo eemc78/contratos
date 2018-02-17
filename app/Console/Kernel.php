@@ -14,6 +14,9 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Commands\Inspire::class,
+        // puede ser asi:  exec:sendemail
+        // o asi:  execEmail::class
+        Commands\execEmail::class 
     ];
 
     /**

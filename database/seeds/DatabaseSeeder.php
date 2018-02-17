@@ -12,6 +12,12 @@ use App\Role;
 use App\Permission;
 use App\Models\Department;
 
+use App\Models\sexo;
+use App\Models\EstadoContrato;
+use App\Models\Ter;
+use App\Models\TipoContrato;
+
+
 class DatabaseSeeder extends Seeder
 {
 	/**
@@ -57,6 +63,12 @@ class DatabaseSeeder extends Seeder
 		$dept->color = "#000";
 		$dept->save();
 		
+		$dept = new Department;
+		$dept->name = "Sistemas";
+		$dept->tags = "[]";
+		$dept->color = "#000";
+		$dept->save();
+		
 		// Create Super Admin Role
 		$role = new Role;
 		$role->name = "SUPER_ADMIN";
@@ -84,27 +96,27 @@ class DatabaseSeeder extends Seeder
 		
 		$laconfig = new LAConfigs;
 		$laconfig->key = "sitename";
-		$laconfig->value = "LaraAdmin 1.0";
+		$laconfig->value = "Gestión Administrativa";
 		$laconfig->save();
 
 		$laconfig = new LAConfigs;
 		$laconfig->key = "sitename_part1";
-		$laconfig->value = "Lara";
+		$laconfig->value = "Clinica";
 		$laconfig->save();
 		
 		$laconfig = new LAConfigs;
 		$laconfig->key = "sitename_part2";
-		$laconfig->value = "Admin 1.0";
+		$laconfig->value = "Laura Daniela";
 		$laconfig->save();
 		
 		$laconfig = new LAConfigs;
 		$laconfig->key = "sitename_short";
-		$laconfig->value = "LA";
+		$laconfig->value = "CL";
 		$laconfig->save();
 
 		$laconfig = new LAConfigs;
 		$laconfig->key = "site_description";
-		$laconfig->value = "LaraAdmin is a open-source Laravel Admin Panel for quick-start Admin based applications and boilerplate for CRM or CMS systems.";
+		$laconfig->value = "Gestión Administrativa de la Clinica Integral de Emergencias Laura Daniela";
 		$laconfig->save();
 
 		// Display Configurations
@@ -148,13 +160,90 @@ class DatabaseSeeder extends Seeder
 
 		$laconfig = new LAConfigs;
 		$laconfig->key = "default_email";
-		$laconfig->value = "test@example.com";
+		$laconfig->value = "sistemas@edgardomartinez.com";
 		$laconfig->save();
 		
 		$modules = Module::all();
 		foreach ($modules as $module) {
 			$module->is_gen=true;
 			$module->save();	
+		}
+
+
+		if (Schema::hasTable('sexos')) {
+			//
+			$sexos = new Sexo;
+			$sexos->sexo ="Femenino";
+			$sexos->save();
+
+			$sexos = new Sexo;
+			$sexos->sexo ="Masculino";
+			$sexos->save();
+
+			$sexos = new Sexo;
+			$sexos->sexo ="Entidad";
+			$sexos->save();
+		}
+
+		if (Schema::hasTable('estadocontratos')) {
+			//
+			$estadocontratos = new EstadoContrato;
+			$estadocontratos->estado ="Vigente";
+			$estadocontratos->save();
+
+			$estadocontratos = new EstadoContrato;
+			$estadocontratos->estado ="Suspendido";
+			$estadocontratos->save();
+
+			$estadocontratos = new EstadoContrato;
+			$estadocontratos->estado ="Terminado";
+			$estadocontratos->save();
+		}
+
+		if (Schema::hasTable('tipocontratos')) {
+			//
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Suministro";
+			$tipocontratos->save();
+
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato  ="Prestación de servicios";
+			$tipocontratos->save();
+
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Aprendizaje";
+			$tipocontratos->save();
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Arrendamiento";
+			$tipocontratos->save();
+
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Leasing";
+			$tipocontratos->save();
+
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Contrato de obra";
+			$tipocontratos->save();
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Licitación";
+			$tipocontratos->save();
+
+			$tipocontratos = new TipoContrato;
+			$tipocontratos->tipocontrato ="Prestación de servicios profesionales";
+			$tipocontratos->save();
+
+		}
+
+		if (Schema::hasTable('ters')) {
+			//
+			$ters = new Ter;
+			$ters->razonsocial = "Clinica Integral de Emergencias Laura Daniela S.A.";
+			$ters->direccion = "Carrera 19 B No 14-47";
+			$ters->telefono = "+575803535";
+			$ters->representante = "Jaime Arce Garcia";
+			$ters->nit = "900008328";
+			$ters->save();
+
 		}
 	}
 }

@@ -39,6 +39,24 @@ class MailController extends Controller
             $msj->subject('Correo de Contacto');
             $msj->to('jhonataninissyou7@gmail.com');
             $msj->cc('sistemas@clinicalauradaniela.com');
+            /*
+                $message->from($address, $name = null);
+                $message->sender($address, $name = null);
+                $message->to($address, $name = null);
+                $message->cc($address, $name = null);
+                $message->bcc($address, $name = null);
+                $message->replyTo($address, $name = null);
+                $message->subject($subject);
+                $message->priority($level);
+                $message->attach($pathToFile, array $options = []);
+
+                // Attach a file from a raw $data string...
+                $message->attachData($data, $name, array $options = []);
+
+                // Get the underlying SwiftMailer message instance...
+                $message->getSwiftMessage();
+
+            */
 
         });
 
