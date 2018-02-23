@@ -198,6 +198,10 @@ class DatabaseSeeder extends Seeder
 			$estadocontratos = new EstadoContrato;
 			$estadocontratos->estado ="Terminado";
 			$estadocontratos->save();
+
+			$estadocontratos = new EstadoContrato;
+			$estadocontratos->estado ="En renovación";
+			$estadocontratos->save();
 		}
 
 		if (Schema::hasTable('tipocontratos')) {

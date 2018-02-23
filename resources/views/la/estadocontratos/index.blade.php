@@ -8,7 +8,8 @@
 
 @section("headerElems")
 @la_access("EstadoContratos", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add EstadoContrato</button>
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Agregar EstadoContrato
+	</button>
 @endla_access
 @endsection
 

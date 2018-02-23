@@ -20,6 +20,16 @@
                         </div>
                     </a>
                 </li>
+
+                <li>
+                    <a href='javascript::;'>
+                        <i class="menu-icon fa fa-pie-chart data-fa-transform='grow-6' " style="background:MistyRose"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">REFERENCIA OTRO MENU</h4>
+                            <p>Esta parte te cambia de dashboard </p>
+                        </div>
+                    </a>
+                </li>
             </ul><!-- /.control-sidebar-menu -->
 
             <h3 class="control-sidebar-heading">Tareas en progreso</h3>

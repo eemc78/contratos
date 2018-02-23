@@ -1,0 +1,12 @@
+﻿
+                                                                               
+  [ErrorException]                                                             
+  Undefined property: stdClass::$fecha (View: C:\wamp64\www\laravel\contratos  
+  \resources\views\emails\send_alerta_vencimiento.blade.php)                   
+                                                                               
+
+                                        
+  [ErrorException]                      
+  Undefined property: stdClass::$fecha  
+                                        
+

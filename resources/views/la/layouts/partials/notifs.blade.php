@@ -118,7 +118,7 @@
 									<?php
 									$datec = Auth::user()['created_at'];
 									?>
-									<small>Miembrod desde <?php echo date("M. Y", strtotime($datec)); ?></small>
+									<small>Miembro desde <?php echo date("M. Y", strtotime($datec)); ?></small>
 								</p>
 							</li>
 							<!-- Menu Body -->
@@ -149,6 +149,16 @@
 								<div class="pull-right">
 									<a href="{{ url('/logout') }}" class="btn btn-default btn-flat">Salir</a>
 								</div>
+								
+		                            <div  style="display: block;  margin-left: auto;  margin-right: auto; text-align: center; "> 
+		                                <a href="{{ url(config('laraadmin.adminRoute') . '/users/') .'/'. Auth::user()->id  }}" > 
+		                                    <span class="fa-stack fa-lg">         
+		                                        <i class="fa fa-circle  fa-stack-2x " style="color:orange"></i>  
+		                                        <i class="fa fa-dribbble fa-stack-2x fa-spin " style="color:black;" ></i>
+		                                    </span>
+		                                </a>
+		                            </div>
+		                        
 							</li>
 						</ul>
 					</li>

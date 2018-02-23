@@ -11,9 +11,24 @@
                     <img src="{{ Gravatar::fallback(asset('la-assets/img/user2-160x160.jpg'))->get(Auth::user()->email) }}" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>{{ Auth::user()->name }}</p>
+                    <p>{{ Auth::user()->name }}
+                        @role("SUPER_ADMIN")
+                            <div class="pull-right "> 
+                                <a href="{{ url('/logout') }}" > 
+                                    <span class="fa-stack fa-lg">
+                                        
+                                        <i class="fa fa-circle  fa-stack-2x " style="color:orange"></i>  
+                                        <i class="fa fa-dribbble fa-stack-2x fa-spin " style="color:black;" ></i>                                 
+                                    </span>
+                                </a>
+                            </div>
+                        @endrole
+
+
+                    </p>
                     <!-- Status -->
-                    <a href="#"><i class="fa fa-circle text-success"></i> Conectado</a>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Conectado </a>
+
                 </div>
             </div>
         @endif

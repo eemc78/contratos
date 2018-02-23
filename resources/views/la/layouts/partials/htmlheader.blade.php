@@ -15,11 +15,11 @@
   <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
   <!-- For Windows Phone -->
 
-  <!-- CORE CSS-->
+  <!-- CORE CSS
  
-  <link href="{{ asset('css/materialize.min.css') }}" rel="stylesheet"  type="text/css"  media="screen,projection" /> 
-
-  <link href="{{ asset('css/style.min.css') }}" rel="stylesheet"   media="screen,projection" /> 
+  <link href="{{ asset('d/css/materialize.min.css') }}" rel="stylesheet"  type="text/css"  media="screen,projection" /> 
+-->
+  <link href="{{ asset('d/css/style.min.css') }}" rel="stylesheet"   media="screen,projection" /> 
 
   <!-- MARCA CSS -->
  <!--  @if(LAConfigs::getByKey('layout') == 'marca')-->

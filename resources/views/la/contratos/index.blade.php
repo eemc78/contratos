@@ -8,7 +8,9 @@
 
 @section("headerElems")
 @la_access("Contratos", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Contrato</button>
+	<button class="btn btn-success btn-sm pull-left" data-toggle="modal" data-target="#AddModal">	Agregar Contrato
+		
+	</button>
 @endla_access
 @endsection
 
