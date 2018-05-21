@@ -11,10 +11,14 @@ Route::auth();
 	//Route::('mail', 'MailController@store');
 	Route::get('contact', function(){
 		return view('emails\contact');
-	});
+		// 	 //retirado por la migracion
+		});
 		Route::get('contacto', function(){
 		return view('contacto');
-	});
+		// 		 //retirado por la migracion
+		});
+
+
 
 /* ================== Access Uploaded Files ================== */
 Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');
@@ -115,9 +119,38 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::resource(config('laraadmin.adminRoute') . '/notificas', 'LA\NotificasController');
 	Route::get(config('laraadmin.adminRoute') . '/notifica_dt_ajax', 'LA\NotificasController@dtajax');
 
+	/* ================== Areas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/areas', 'LA\AreasController');
+	Route::get(config('laraadmin.adminRoute') . '/area_dt_ajax', 'LA\AreasController@dtajax');
+
+
+	/* ================== envio de correo por comando ================== */
 	Route::get('sendEmail', function(){
-		
 		$job = new \App\Jobs\EnviaEmail();
-		dispatch($job);
+		dispatch($job); 	// 		 //retirado por la migracion
+		
 	});
+	
+	/* ================== Clasificadors ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/clasificadors', 'LA\ClasificadorsController');
+	Route::get(config('laraadmin.adminRoute') . '/clasificador_dt_ajax', 'LA\ClasificadorsController@dtajax');
+
+	/* ================== Clasificaxcontratos ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/clasificaxcontratos', 'LA\ClasificaxcontratosController');
+	Route::get(config('laraadmin.adminRoute') . '/clasificaxcontrato_dt_ajax', 'LA\ClasificaxcontratosController@dtajax');
+
+	/* ================== Tipoprocesos ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/tipoprocesos', 'LA\TipoprocesosController');
+	Route::get(config('laraadmin.adminRoute') . '/tipoproceso_dt_ajax', 'LA\TipoprocesosController@dtajax');
+
+
+
+
+	/* ================== Verificaxprocesos ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/verificaxprocesos', 'LA\VerificaxprocesosController');
+	Route::get(config('laraadmin.adminRoute') . '/verificaxproceso_dt_ajax', 'LA\VerificaxprocesosController@dtajax');
+
+	/* ================== Procesos ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/procesos', 'LA\ProcesosController');
+	Route::get(config('laraadmin.adminRoute') . '/proceso_dt_ajax', 'LA\ProcesosController@dtajax');
 });

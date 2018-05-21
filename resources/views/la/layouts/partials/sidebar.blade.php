@@ -11,6 +11,7 @@
                     <img src="{{ Gravatar::fallback(asset('la-assets/img/user2-160x160.jpg'))->get(Auth::user()->email) }}" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
+                    <!-- esto muestra el baloncito de salir -->
                     <p>{{ Auth::user()->name }}
                         @role("SUPER_ADMIN")
                             <div class="pull-right "> 

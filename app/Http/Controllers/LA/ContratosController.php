@@ -25,15 +25,19 @@ class ContratosController extends Controller
 	public $view_col = 'descripcion';
 	public $listing_cols = ['id', 'fecha', 'idcontrato', 'ter', 'contacto', 'direccion', 'telefono', 'descripcion', 'tipocontrato', 'objetocontrato', 'duracion', 'fechafin', 'valor', 'revisado', 'fecharev', 'juridico', 'fechajur', 'aprobado', 'fechaapr', 'fechaadi', 'detalleadicion', 'estado'];
 	
+	public $listing_cols2 = [ 'idclasificador'];
+
 	public function __construct() {
 		// Field Access of Listing Columns
 		if(\Dwij\Laraadmin\Helpers\LAHelper::laravel_ver() == 5.3) {
 			$this->middleware(function ($request, $next) {
 				$this->listing_cols = ModuleFields::listingColumnAccessScan('Contratos', $this->listing_cols);
+				$this->listing_cols2 = ModuleFields::listingColumnAccessScan('Clasificaxcontratos', $this->listing_cols2);
 				return $next($request);
 			});
 		} else {
 			$this->listing_cols = ModuleFields::listingColumnAccessScan('Contratos', $this->listing_cols);
+			$this->listing_cols2 = ModuleFields::listingColumnAccessScan('Clasificaxcontratos', $this->listing_cols2);
 		}
 	}
 	
@@ -56,6 +60,7 @@ class ContratosController extends Controller
             return redirect(config('laraadmin.adminRoute')."/");
         }
 	}
+
 
 	/**
 	 * Show the form for creating a new contrato.
@@ -214,6 +219,7 @@ class ContratosController extends Controller
 		$data = $out->getData();
 
 		$fields_popup = ModuleFields::getModuleFields('Contratos');
+		$fields_popup2 = ModuleFields::getModuleFields('Clasificaxcontratos');
 		
 		for($i=0; $i < count($data->data); $i++) {
 			for ($j=0; $j < count($this->listing_cols); $j++) { 
@@ -228,7 +234,24 @@ class ContratosController extends Controller
 				//    $data->data[$i][$j];
 				// }
 			}
-			
+						
+			/* los clasificadores */
+			$values2 = DB::table('clasificaxcontratos')->select($this->listing_cols2)->whereNull('deleted_at')->where('idcontrato','=', $data->data[$i][0]);
+			$out2 = Datatables::of($values2)->make();
+			$data2 = $out2->getData();
+			for($ii=0; $ii < count($data2->data); $ii++) {
+				for ($jj=0; $jj < count($this->listing_cols2); $jj++) { 
+					$col2 = $this->listing_cols2[$jj];
+					if($fields_popup2[$col2] != null && starts_with($fields_popup2[$col2]->popup_vals, "@")) {
+						$data2->data[$ii][$jj] = '<a href="'.url(config('laraadmin.adminRoute') . '/clasificadors/'.$data2->data[$ii][0]).'">'. ModuleFields::getFieldValue($fields_popup2[$col2], $data2->data[$ii][$jj]).'</a>';
+					}					
+				}
+			}
+
+			$data->data[$i][] = ($data2->data);
+
+			/* las acciones */
+
 			if($this->show_action) {
 				$output = '';
 				if(Module::hasAccess("Contratos", "edit")) {
@@ -246,4 +269,5 @@ class ContratosController extends Controller
 		$out->setData($data);
 		return $out;
 	}
+
 }

@@ -57,7 +57,7 @@ class execEmail extends Command
                             ,'contratos.contacto'
                             ,'ters.razonsocial as razonsocial'                            
                             //,"'" . Carbon::now('America/Bogota')->toDateTimeString() .  "'"
-                        )
+                        )->whereNull('contratos.deleted_at')
                     ->where('estadocontratos.estado','=','Vigente')
                     ->where('contratos.fechafin','>=',  Carbon::now('America/Bogota')->toDateTimeString() )
                     ->where('contratos.fechafin','<', Carbon::now('America/Bogota')->addMonth(LAConfigs::getByKey('mesesparavencer'))->toDateTimeString()  ) ->orderBy('contratos.fechafin', 'desc')
@@ -73,7 +73,7 @@ class execEmail extends Command
                             ,'contratos.contacto'
                             ,'ters.razonsocial as razonsocial'                            
                             //,"'" . Carbon::now('America/Bogota')->toDateTimeString() .  "'"
-                        )
+                        )->whereNull('contratos.deleted_at')
                     ->where('estadocontratos.estado','=','Vigente')
                     ->where('contratos.fechafin','>', Carbon::now('America/Bogota')->addMonth(LAConfigs::getByKey('mesesparavencer'))->toDateTimeString()  ) 
                     ->orderBy('contratos.fechafin', 'desc')
@@ -85,7 +85,7 @@ class execEmail extends Command
         $resp = Mail::send('emails/send_alerta_vencimiento', ['user'=>$user ,  'MesVence' => $MesVence ,'contratos' => $contratos ,'contprox' => $contprox ], function($msj){
             $msj->subject('Alerta de Vencimiento de Contratos '. Carbon::now('America/Bogota')->toDateTimeString());
             $msj->to('sistemas@edgardomartinez.com');
-            // $msj->cc('gerencia@clinicalauradaniela.com');
+            //$msj->cc('gerencia@clinicalauradaniela.com');
             // $msj->cc('ospi89@hotmail.com');
             // $msj->bcc('jhonataninissyou7@gmail.com');            
         });

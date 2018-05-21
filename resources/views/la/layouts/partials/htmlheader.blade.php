@@ -7,7 +7,9 @@
  <meta name="keywords" content="Gestión,Administrativa,Clinica,integral,Emergencias,Laura,Daniela,Contratos, Edgardo, Martinez,">
 
   <!-- Favicons-->
-  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <!-- <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32"> -->
+
+  <link href="http://clinicaintegral.com.co/templates/vina_medical/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
   <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
      <!-- For iPhone -->

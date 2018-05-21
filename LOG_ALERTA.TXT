@@ -1,12 +1,300 @@
-ï»¿
+ï»¿"[2018-03-02 14:27:58 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-02 14:28:42 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-03-04 13:20:21 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-05 12:36:36 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-06 12:36:24 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+"[2018-03-10 13:22:27 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-03-12 12:50:41 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-13 12:44:34 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
                                                                                
-  [ErrorException]                                                             
-  Undefined property: stdClass::$fecha (View: C:\wamp64\www\laravel\contratos  
-  \resources\views\emails\send_alerta_vencimiento.blade.php)                   
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo  
+   de destino denegó expresamente dicha conexión.                              
                                                                                
 
-                                        
-  [ErrorException]                      
-  Undefined property: stdClass::$fecha  
-                                        
+"[2018-03-15 12:36:56 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-16 12:36:44 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
 
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-03-19 12:51:43 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-20 12:36:38 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-21 12:36:52 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-22 12:36:31 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-03-23 12:45:09 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-03-25 13:01:58 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-03-27 12:37:03 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-03-30 12:43:43 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-04-02 12:43:51 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-03 12:49:42 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-04-08 12:43:33 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-09 12:44:34 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+"[2018-04-11 12:57:54 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-12 12:53:58 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-13 12:46:16 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-04-20 12:39:56 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+"[2018-04-23 12:36:48 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-24 12:38:05 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-04-26 12:36:40 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-27 12:36:38 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-28 12:59:51 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-04-29 13:23:01 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                         
+  [Swift_TransportException]             
+  Unable to connect with TLS encryption  
+                                         
+
+"[2018-05-04 12:37:07 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-05-06 12:54:04 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-05-07 12:36:46 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-05-09 13:18:10 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+
+                                                                               
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo  
+   de destino denegó expresamente dicha conexión.                              
+                                                                               
+
+
+                                                                               
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo  
+   de destino denegó expresamente dicha conexión.                              
+                                                                               
+
+
+                                                                               
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo  
+   de destino denegó expresamente dicha conexión.                              
+                                                                               
+
+
+                                                                               
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo  
+   de destino denegó expresamente dicha conexión.                              
+                                                                               
+
+
+                                                                               
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo  
+   de destino denegó expresamente dicha conexión.                              
+                                                                               
+
+
+                                                                               
+  [PDOException]                                                               
+  SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión y  
+  a que la parte conectada no respondió adecuadamente tras un periodo de tiem  
+  po, o bien se produjo un error en la conexión establecida ya que el host co  
+  nectado no ha podido responder.                                              
+                                                                               
+
+"[2018-05-18 12:58:13 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+
+                                                           
+  [ErrorException]                                         
+  stream_socket_enable_crypto(): SSL: Handshake timed out  
+                                                           
+
+"[2018-05-20 13:15:27 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "
+"[2018-05-21 12:37:07 ] >> ERROR FALLO EN LA TAREA *********************** 1ERROR **** "

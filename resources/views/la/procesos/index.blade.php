@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
-@section("contentheader_title", "Uploads")
-@section("contentheader_description", "Uploads listing")
-@section("section", "Uploads")
+@section("contentheader_title", "Procesos")
+@section("contentheader_description", "Procesos listing")
+@section("section", "Procesos")
 @section("sub_section", "Listing")
-@section("htmlheader_title", "Uploads Listing")
+@section("htmlheader_title", "Procesos Listing")
 
 @section("headerElems")
-@la_access("Uploads", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Upload</button>
+@la_access("Procesos", "create")
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Proceso</button>
 @endla_access
 @endsection
 
@@ -45,27 +45,29 @@
 	</div>
 </div>
 
-@la_access("Uploads", "create")
+@la_access("Procesos", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Upload</h4>
+				<h4 class="modal-title" id="myModalLabel">Add Proceso</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\UploadsController@store', 'id' => 'upload-add-form']) !!}
+			{!! Form::open(['action' => 'LA\ProcesosController@store', 'id' => 'proceso-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'name')
-					@la_input($module, 'path')
-					@la_input($module, 'extension')
-					@la_input($module, 'caption')
-					@la_input($module, 'user_id')
-					@la_input($module, 'hash')
-					@la_input($module, 'public')
+					@la_input($module, 'numero')
+					@la_input($module, 'tipoproceso')
+					@la_input($module, 'detalle')
+					@la_input($module, 'usuario')
+					@la_input($module, 'fecha')
+					@la_input($module, 'proveedor')
+					@la_input($module, 'estadoverifica')
+					@la_input($module, 'ordencompra')
+					@la_input($module, 'factura')
 					--}}
 				</div>
 			</div>
@@ -92,12 +94,12 @@ $(function () {
 	$("#example1").DataTable({
 		processing: true,
         serverSide: true,
-        ajax: "{{ url(config('laraadmin.adminRoute') . '/upload_dt_ajax') }}",
+        ajax: "{{ url(config('laraadmin.adminRoute') . '/proceso_dt_ajax') }}",
 		language: {
 			// lengthMenu: "_MENU_",
 			// search: "_INPUT_",
 			// searchPlaceholder: "Search"
-			"sProcessing":     "Procesando...",
+			 "sProcessing":     "Procesando...",
 		    "sLengthMenu":     "Mostrar _MENU_ registros",
 		    "sZeroRecords":    "No se encontraron resultados",
 		    "sEmptyTable":     "Ningún dato disponible en esta tabla",
@@ -124,7 +126,7 @@ $(function () {
 		columnDefs: [ { orderable: false, targets: [-1] }],
 		@endif
 	});
-	$("#upload-add-form").validate({
+	$("#proceso-add-form").validate({
 		
 	});
 });

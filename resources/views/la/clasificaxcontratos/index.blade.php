@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
-@section("contentheader_title", "Uploads")
-@section("contentheader_description", "Uploads listing")
-@section("section", "Uploads")
+@section("contentheader_title", "Clasificaxcontratos")
+@section("contentheader_description", "Clasificaxcontratos listing")
+@section("section", "Clasificaxcontratos")
 @section("sub_section", "Listing")
-@section("htmlheader_title", "Uploads Listing")
+@section("htmlheader_title", "Clasificaxcontratos Listing")
 
 @section("headerElems")
-@la_access("Uploads", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Upload</button>
+@la_access("Clasificaxcontratos", "create")
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Clasificaxcontrato</button>
 @endla_access
 @endsection
 
@@ -45,27 +45,22 @@
 	</div>
 </div>
 
-@la_access("Uploads", "create")
+@la_access("Clasificaxcontratos", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Upload</h4>
+				<h4 class="modal-title" id="myModalLabel">Add Clasificaxcontrato</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\UploadsController@store', 'id' => 'upload-add-form']) !!}
+			{!! Form::open(['action' => 'LA\ClasificaxcontratosController@store', 'id' => 'clasificaxcontrato-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'name')
-					@la_input($module, 'path')
-					@la_input($module, 'extension')
-					@la_input($module, 'caption')
-					@la_input($module, 'user_id')
-					@la_input($module, 'hash')
-					@la_input($module, 'public')
+					@la_input($module, 'idcontrato')
+					@la_input($module, 'idclasificador')
 					--}}
 				</div>
 			</div>
@@ -92,7 +87,7 @@ $(function () {
 	$("#example1").DataTable({
 		processing: true,
         serverSide: true,
-        ajax: "{{ url(config('laraadmin.adminRoute') . '/upload_dt_ajax') }}",
+        ajax: "{{ url(config('laraadmin.adminRoute') . '/clasificaxcontrato_dt_ajax') }}",
 		language: {
 			// lengthMenu: "_MENU_",
 			// search: "_INPUT_",
@@ -124,7 +119,7 @@ $(function () {
 		columnDefs: [ { orderable: false, targets: [-1] }],
 		@endif
 	});
-	$("#upload-add-form").validate({
+	$("#clasificaxcontrato-add-form").validate({
 		
 	});
 });
